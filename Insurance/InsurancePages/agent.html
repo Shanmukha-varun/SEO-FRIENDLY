@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become an Agent | Vales Insurance Company</title>
+    <link rel="stylesheet" href="styles.css">
+    <head>
+        <link rel="icon" type="assets/img" href="assets/img/Adobe_Express_-_file__4_-removebg-preview.png">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+      </head>
+    <script defer src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        :root {
+            --primary-color:rgb(60, 187, 241);
+            --secondary-color: rgb(34, 166, 236);
+            --accent-color: rgb(33, 126, 232);
+            --background-light: #7cbbf9;
+            --text-color: #000000;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-light);
+            opacity: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #a5d3ea;
+        }
+        header {
+            background:#ffffff;
+            color:#40b6f1;
+            padding: 20px;
+        }
+        .calculator, .steps, .signup {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            display: block;
+            width: 80%;
+            margin: 10px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #004080;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #003366;
+        }
+        ol {
+            text-align: left;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Become an Vales Insurance Agent🐳</h1>
+        <p>Join us and build a rewarding career in the insurance industry.</p>
+    </header>
+    
+    <section class="calculator">
+        <h2>How much can you earn?</h2>
+        <label>Families in your network:</label>
+        <input type="number" id="families" value="200">
+        <label>Shops/Factories:</label>
+        <input type="number" id="shops" value="100">
+        <button onclick="calculateEarnings()">Calculate</button>
+        <h3>Approx. Annual Earnings: <span id="earnings">₹1,380,000</span></h3>
+    </section>
+    
+    <section class="steps">
+        <h2>Steps to Join</h2>
+        <ol>
+            <li> Day of Orientation</li>
+            <li> Days of Main Workshop</li>
+            <li> Get Certified</li>
+        </ol>
+    </section>
+    
+    <section class="signup">
+        <h2>Sign Up Now</h2>
+        <form>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <button type="submit">Enroll Now</button>
+        </form>
+    </section>
+    <script>
+        gsap.to("body", { opacity: 1, duration: 1 });
+
+document.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function (event) {
+        const href = this.getAttribute("href");
+
+        if (href.startsWith("#") || href === "javascript:void(0)") return;
+
+        event.preventDefault();
+        gsap.to("body", { opacity: 0, duration: 0.8, onComplete: () => (window.location.href = href) });
+    });
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vales Health Insurance</title>
+  <head>
+    <link rel="icon" type="assets/img" href="assets/img/Adobe_Express_-_file__4_-removebg-preview.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      display: flex;
+      width: 100%;
+      max-width: 1200px;
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      overflow: hidden;
+    }
+    .left-section {
+      width: 60%;
+      padding: 40px;
+      background-color: #f0f8ff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .right-section {
+      width: 40%;
+      padding: 40px;
+      background-color: white;
+    }
+    .benefits {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .benefit {
+      background-color: #e6f2ff;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #0072bc;
+    }
+    .family-image {
+      max-width: 500px;
+      margin: 20px 0;
+    }
+    .description {
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .form-section {
+      background-color: #f9f9f9;
+      padding: 30px;
+      border-radius: 15px;
+    }
+    .form-title {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #004c99;
+    }
+    .form-input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    .checkbox-group {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .get-otp-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .get-otp-btn:hover {
+      background-color: #ff4500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      <div class="benefits">
+        <div class="benefit">2x OPD benefits</div>
+        <div class="benefit">Unlimited Reinstatement Benefit</div>
+        <div class="benefit">Inbuilt Maternity & Baby Cover</div>
+      </div>
+      <h1>Vales Health Insurance</h1>
+      <p class="description">Expense cover for two deliveries and end-to-end healthcare for new-born. Access all-inclusive health insurance plan with benefits you can utilize!</p>
+      <img src="assets/img/Doc.png" alt="best insurance company" class="family-image">
+    </div>
+    <div class="right-section">
+      <div class="form-section">
+        <h2 class="form-title">Access Health Insurance</h2>
+        <input type="text" placeholder="Full Name" class="form-input">
+        <input type="tel" placeholder="Mobile Number" class="form-input">
+        <input type="text" placeholder="Pincode" class="form-input">
+        
+        <div class="checkbox-group">
+          <input type="checkbox" id="whatsapp">
+          <label for="whatsapp">Get updates on WhatsApp/SMS</label>
+        </div>
+        
+        <div class="checkbox-group">
+          <input type="checkbox" id="privacy">
+          <label for="privacy">I agree to the data privacy policy</label>
+        </div>
+        
+        <button class="get-otp-btn">Get OTP</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

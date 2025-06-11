@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Claim Process | Vales Insurance Company</title>
+    <head>
+        <link rel="icon" type="assets/img" href="assets/img/Adobe_Express_-_file__4_-removebg-preview.png">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+      </head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        :root {
+            --primary-color:rgb(60, 187, 241);
+            --secondary-color: rgb(34, 166, 236);
+            --accent-color: rgb(33, 126, 232);
+            --background-light: #7cbbf9;
+            --text-color: #000000;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-light);
+            opacity: 0;
+        }
+        :root {
+            --primary-color:rgb(60, 187, 241);
+            --secondary-color: rgb(34, 166, 236);
+            --accent-color: rgb(33, 126, 232);
+            --background-light: #7cbbf9;
+            --text-color: #000000;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            background-size: 200% 200%;
+            animation: gradientBG 15s ease infinite;
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .claim-steps {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 0;
+            gap: 20px;
+        }
+
+        .step {
+            background-color: var(--white);
+            border-radius: 15px;
+            padding: 35px;
+            text-align: center;
+            flex: 1;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+
+        .step:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            border-color:rgb(13, 23, 138);
+        }
+
+        .step-icon {
+            font-size: 4rem;
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+            animation: floatUp 4s ease-in-out infinite;
+        }
+
+        .step h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .faq {
+            background-color: var(--background-light);
+            padding: 50px 0;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            margin-bottom: 20px;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            transform: scale(1.02);
+        }
+
+        .faq-item h4 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        .faq-item .answer {
+            display: none;
+            margin-top: 15px;
+            color: var(--text-color);
+        }
+
+        .contact {
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            color: var(--white);
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-method {
+            background-color: rgba(255,255,255,0.2);
+            padding: 25px;
+            border-radius: 15px;
+            flex: 0 1 250px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-method:hover {
+            transform: scale(1.05);
+            background-color: rgba(255,255,255,0.3);
+        }
+
+        .contact-method i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .claim-steps {
+                flex-direction: column;
+            }
+
+            .contact-methods {
+                flex-direction: column;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1>Vales Insurance Claim Process</h1>
+                <p>Navigate your insurance claims with confidence, transparency, and unparalleled support every step of the way</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="container claim-steps">
+        <div class="step">
+            <div class="step-icon">
+                <i class="fas fa-file-upload"></i>
+            </div>
+            <h3>Submit Claim</h3>
+            <p>Quick and easy online claim submission through our intuitive digital platforms</p>
+        </div>
+        <div class="step">
+            <div class="step-icon">
+                <i class="fas fa-search-plus"></i>
+            </div>
+            <h3>Detailed Review</h3>
+            <p>Comprehensive claim assessment by our experienced professional team</p>
+        </div>
+        <div class="step">
+            <div class="step-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Swift Resolution</h3>
+            <p>Fast, fair, and transparent claim settlement process with clear communication</p>
+        </div>
+    </section>
+
+    <section class="faq container">
+        <h2 style="text-align: center; margin-bottom: 40px; color:black;">Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h4>How long does a claim take to process?
+                <i class="fas fa-chevron-down"></i>
+            </h4>
+            <div class="answer">
+                <p>Most claims are processed within 10-15 business days, with our team working diligently to expedite your claim.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h4>What documents do I need to file a claim?
+                <i class="fas fa-chevron-down"></i>
+            </h4>
+            <div class="answer">
+                <p>Typically, you'll need incident reports, relevant photographs, medical records, and your policy information to ensure a smooth claim process.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2>Connect with Our Claims Support</h2>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Phone Support</h3>
+                    <p>+91 8374118526-CLAIM-NOW</p>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Support</h3>
+                    <p>Vales@insurancecompany.com</p>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-comments"></i>
+                    <h3>Live Chat</h3>
+                    <p>24/7 Instant Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelectorAll('.faq-item h4').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                const icon = item.querySelector('i');
+                
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    answer.style.display = 'block';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+        gsap.to("body", { opacity: 1, duration: 1 });
+
+        document.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", function (event) {
+                const href = this.getAttribute("href");
+
+                if (href.startsWith("#") || href === "javascript:void(0)") return;
+
+                event.preventDefault();
+                gsap.to("body", { opacity: 0, duration: 0.8, onComplete: () => (window.location.href = href) });
+            });
+        });
+    </script>
+</body>
+</html>

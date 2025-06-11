@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Government Insurance Scheme</title>
+    <head>
+        <link rel="icon" type="assets/img" href="assets/img/Adobe_Express_-_file__4_-removebg-preview.png">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+      </head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #e6f2ff 0%, #b3d9ff 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            background: white;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .left-section {
+            flex: 1;
+            background: linear-gradient(135deg, #008000 0%, #00cc00 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 40px;
+            color: white;
+            position: relative;
+        }
+        .left-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .left-section p {
+            max-width: 450px;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        .scheme-highlights {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .scheme-highlights h3 {
+            margin-bottom: 10px;
+            color: #f0f0f0;
+        }
+        .scheme-highlights ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .scene {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            opacity: 0.7;
+        }
+        .scene img {
+            max-width: 40%;
+            height: auto;
+        }
+        .right-section {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .quote-form {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight: 600;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .form-group input[type="text"]:focus,
+        .form-group input[type="tel"]:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #008000;
+            box-shadow: 0 0 0 3px rgba(0,128,0,0.1);
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+        .submit-button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #008000 0%, #00cc00 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div>
+                <h1 id="schemeHeading">Government Insurance Scheme</h1>
+                <p id="schemeDescription">Description of the government insurance scheme will appear here.</p>
+                
+                <div class="scheme-highlights">
+                    <h3>Key Highlights</h3>
+                    <ul id="schemeHighlights">
+                        <li>Highlight 1</li>
+                        <li>Highlight 2</li>
+                        <li>Highlight 3</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        <div class="right-section">
+            <div class="quote-form">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Agricultural Land Details</label>
+                    <input type="text" placeholder="Enter total land area (in acres)" required>
+                </div>
+                <div class="form-group">
+                    <label>Select District</label>
+                    <select required>
+                        <option value="">Select Your District</option>
+                        <option value="north">North District</option>
+                        <option value="south">South District</option>
+                        <option value="east">East District</option>
+                        <option value="west">West District</option>
+                        <option value="central">Central District</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Crop Type</label>
+                    <select required>
+                        <option value="">Select Crop Type</option>
+                        <option value="rice">Rice</option>
+                        <option value="wheat">Wheat</option>
+                        <option value="cotton">Cotton</option>
+                        <option value="sugarcane">Sugarcane</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input type="tel" placeholder="Enter your mobile number" required>
+                </div>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" required>
+                        I agree to share my information for scheme verification
+                    </label>
+                    <label>
+                        <input type="checkbox" required>
+                        I understand the terms and conditions of the scheme
+                    </label>
+                </div>
+                <button class="submit-button">Apply for Scheme</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setSchemeDetails(scheme) {
+            const details = {
+                'personal': {
+                    heading: 'Personal Insurance Scheme',
+                    description: 'Comprehensive insurance solutions tailored for individuals and families.',
+                    highlights: [
+                        'Customized health insurance plans',
+                        'Life insurance with flexible options',
+                        'Personal accident and disability cover',
+                        'Comprehensive family protection'
+                    ],
+                    title: 'Personal Insurance - Comprehensive Coverage'
+                },
+                'commercial': {
+                    heading: 'Commercial Insurance Scheme',
+                    description: 'Robust insurance products designed for businesses of all sizes.',
+                    highlights: [
+                        'Business property insurance',
+                        'Liability and risk management',
+                        'Business interruption coverage',
+                        'Employee health and group insurance'
+                    ],
+                    title: 'Commercial Insurance - Business Protection'
+                },
+                'govt-schemes': {
+                    heading: 'Government Insurance Schemes',
+                    description: 'Specialized insurance programs supported by government initiatives.',
+                    highlights: [
+                        'Pradhan Mantri Suraksha Bima Yojana',
+                        'Crop insurance programs',
+                        'Social security schemes',
+                        'Subsidized insurance options'
+                    ],
+                    title: 'Government Insurance Schemes'
+                },
+                'rural': {
+                    heading: 'Rural Insurance Scheme',
+                    description: 'Insurance solutions specifically designed for rural communities and agricultural sectors.',
+                    highlights: [
+                        'Crop and livestock insurance',
+                        'Rural health coverage',
+                        'Micro-insurance plans',
+                        'Agricultural risk protection'
+                    ],
+                    title: 'Rural Insurance - Agricultural Protection'
+                },
+                
+                'pmjay': {
+                    heading: 'Pradhan Mantri Jan Arogya Yojana (PMJAY)',
+                    description: 'A flagship health insurance scheme that provides health coverage of up to ₹5 lakhs per family per year for secondary and tertiary care hospitalization.',
+                    highlights: [
+                        'Covers up to 5 lakh rupees per family annually',
+                        'Includes pre-existing conditions',
+                        'Cashless treatment at empanelled hospitals',
+                        'No restrictions on family size or age'
+                    ],
+                    title: 'PMJAY - Ayushman Bharat Yojana'
+                },
+                'pmsby': {
+                    heading: 'Pradhan Mantri Suraksha Bima Yojana (PMSBY)',
+                    description: 'A government-backed accident insurance scheme providing financial protection against disability and death due to accidents.',
+                    highlights: [
+                        'Annual premium of just ₹12',
+                        'Accidental death coverage of ₹2 lakhs',
+                        'Permanent total disability coverage of ₹2 lakhs',
+                        'Partial disability coverage of ₹1 lakh'
+                    ],
+                    title: 'PMSBY - Accident Insurance Scheme'
+                },
+                'pmfby': {
+                    heading: 'Pradhan Mantri Fasal Bima Yojana (PMFBY)',
+                    description: 'A comprehensive crop insurance scheme designed to provide financial support to farmers in case of crop failure due to natural calamities.',
+                    highlights: [
+                        'Covers food and cash crops',
+                        'Low premium rates for farmers',
+                        'Quick claim settlements',
+                        'Comprehensive risk coverage from pre-sowing to post-harvest'
+                    ],
+                    title: 'PMFBY - Crop Insurance Scheme'
+                },
+                'weather': {
+                    heading: 'Weather-Based Crop Insurance Scheme (WBCIS)',
+                    description: 'An innovative insurance scheme that provides financial protection to farmers against adverse weather conditions that can damage crops.',
+                    highlights: [
+                        'Covers losses due to unseasonal rainfall',
+                        'Protects against drought, flood, and other extreme weather events',
+                        'Compensation based on predetermined weather parameters',
+                        'Helps stabilize farmer income'
+                    ],
+                    title: 'Weather-Based Crop Insurance Scheme'
+                }
+            };
+        
+            const normalizedScheme = scheme.toLowerCase().replace(/[^a-z]/g, '');
+            
+            const schemeDetails = Object.keys(details).find(key => 
+                key.toLowerCase().replace(/[^a-z]/g, '') === normalizedScheme
+            );
+        
+            const selectedScheme = details[schemeDetails || 'pmjay'];
+            
+            document.getElementById('schemeHeading').textContent = selectedScheme.heading;
+            document.getElementById('schemeDescription').textContent = selectedScheme.description;
+            document.getElementById('pageTitle').textContent = selectedScheme.title;
+            
+            const highlightsList = document.getElementById('schemeHighlights');
+            highlightsList.innerHTML = selectedScheme.highlights.map(highlight => `<li>${highlight}</li>`).join('');
+        }
+        
+       
+        function getSchemeFromSource() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const storageScheme = localStorage.getItem('selectedScheme');
+            return urlParams.get('scheme') || storageScheme || 'pmjay';
+        }
+        
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const scheme = getSchemeFromSource();
+            setSchemeDetails(scheme);
+        });
+        </script>
+</body>
+</html>

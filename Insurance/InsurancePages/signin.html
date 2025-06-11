@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to your insurance account to manage your policies, claims, and more.">
+  <meta name="keywords" content="insurance, sign in, login, insurance account, policy management">
+  <meta name="author" content="Insurance Company">
+  <head>
+    <link rel="icon" type="assets/img" href="assets/img/Adobe_Express_-_file__4_-removebg-preview.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <title>Sign In | Vales Insurance Company</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .login-container h1 {
+      color: #333;
+      margin-bottom: 20px;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .login-container img {
+      width: 175px;
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-button:hover {
+      background-color: #0056b3;
+    }
+
+    .form-footer {
+      text-align: center;
+      margin-top: 20px;
+      color: #666;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .form-footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+    .otp-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .otp-group input {
+      flex: 1;
+      margin-right: 10px;
+    }
+
+    .otp-group button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .otp-group button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <img src="assets/img/vales.png" alt="best insurance company" class="logo">
+    <h1>Sign In</h1>
+    <form>
+      <div class="form-group">
+        <label for="insuranceId">Insurance ID</label>
+        <input type="text" id="insuranceId" name="insuranceId" placeholder="Eg:A23126510164" minlength="6" maxlength="15" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNo">Phone Number</label>
+        <input type="tel" id="phoneNo" name="phoneNo" placeholder="83741 25412" minlength="10" maxlength="10" required>
+      </div>
+
+      <div class="form-group otp-group">
+        <input type="text" id="otp" name="otp" placeholder="Enter OTP" minlength="5" required>
+        <button type="button">Send OTP</button>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="submit-button">Sign In</button>
+      </div>
+    </form>
+
+    <div class="form-footer">
+      <p>Don't have an account? <a href="signup.html" target="_parent">Sign Up</a></p>
+    </div>
+  </div>
+</body>
+
+</html>

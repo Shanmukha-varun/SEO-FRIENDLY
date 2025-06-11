@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Insurance Quote</title>
+    <head>
+        <link rel="icon" type="assets/img" href="assets/img/Adobe_Express_-_file__4_-removebg-preview.png">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+      </head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .left-section {
+            flex: 1;
+            background: linear-gradient(135deg, #0072bc 0%, #4facfe 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+            color: white;
+            position: relative;
+        }
+        .left-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .left-section p {
+            max-width: 400px;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+        .scene {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            opacity: 0.7;
+        }
+        .scene img {
+            max-width: 50%;
+            height: auto;
+        }
+        .right-section {
+            flex: 1;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .quote-form {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        .form-group input[type="text"]:focus,
+        .form-group input[type="tel"]:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #0072bc;
+        }
+        .policy-toggle {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .policy-toggle button {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: #f0f0f0;
+            color: #666;
+            transition: all 0.3s;
+        }
+        .policy-toggle button.active {
+            background: #0072bc;
+            color: white;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .next-button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #ff9800 0%, #f44336 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .next-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <div>
+                <h1 id="insuranceTypeHeading">Insurance Heading</h1>
+                <p id="insuranceDescription">Detailed description about the specific type of insurance will go here. This provides context and highlights the key benefits of this insurance type.</p>
+            </div>
+            
+        </div>
+        <div class="right-section">
+            <div class="quote-form">
+                <h3>Do you Have Vales Insurance</h3>
+                <div class="policy-toggle">
+                    <button onclick="togglePolicy(this)">No</button>
+                    <button onclick="togglePolicy(this)">Yes</button>
+                </div>
+                <div class="form-group">
+                    <label>Company/Business Name</label>
+                    <input type="text" placeholder="Enter company name" required>
+                </div>
+                <div class="form-group">
+                    <label>Business Type</label>
+                    <select id="businessType" required>
+                        <option value="">Select Business Type</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="services">Services</option>
+                        <option value="it">IT</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Contact Person Name</label>
+                    <input type="text" placeholder="First name" required>
+                    <input type="text" placeholder="Last name" required>
+                </div>
+                <div class="form-group">
+                    <label>Contact Number</label>
+                    <input type="tel" placeholder="Mobile number" required>
+                </div>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" required>
+                        I agree to the data privacy policy
+                    </label>
+                    <label>
+                        <input type="checkbox" required>
+                        I want to receive quote and policy details
+                    </label>
+                </div>
+                <button class="next-button">Get Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function setInsuranceDetails(type) {
+            const details = {
+                'employee': {
+                    heading: 'Employee Insurance',
+                    description: 'Comprehensive insurance coverage for your employees, providing protection and peace of mind for your workforce.',
+                    title: 'Employee Insurance Quote'
+                },
+                'liability': {
+                    heading: 'Liability Insurance',
+                    description: 'Protect your business from potential legal claims and financial risks with our comprehensive liability insurance solutions.',
+                    title: 'Liability Insurance Quote'
+                },
+                'property': {
+                    heading: 'Property Insurance',
+                    description: 'Safeguard your business assets, buildings, and equipment against unforeseen damages and potential financial losses.',
+                    title: 'Property Insurance Quote'
+                },
+                'transit': {
+                    heading: 'Transit Insurance',
+                    description: 'Ensure the safety of your goods during transportation with our comprehensive transit insurance coverage.',
+                    title: 'Transit Insurance Quote'
+                }
+            };
+
+            const typeDetails = details[type.toLowerCase()] || details['employee'];
+            
+            document.getElementById('insuranceTypeHeading').textContent = typeDetails.heading;
+            document.getElementById('insuranceDescription').textContent = typeDetails.description;
+            document.getElementById('pageTitle').textContent = typeDetails.title;
+        }
+
+        function togglePolicy(button) {
+            const buttons = document.querySelectorAll('.policy-toggle button');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const insuranceType = urlParams.get('type') || 'employee';
+        setInsuranceDetails(insuranceType);
+    </script>
+</body>
+</html>
