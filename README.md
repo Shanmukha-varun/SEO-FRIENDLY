@@ -42,9 +42,6 @@ git clone https://github.com/your-username/insurance-website.git
 cd insurance-website
 # Open index.html in your browser
 
-💡 Improvements Coming Soon
-*Better mobile responsiveness (for real this time 😬)
-
 *Form integration for actual quote submission
 
 *More accessibility and UI polish
