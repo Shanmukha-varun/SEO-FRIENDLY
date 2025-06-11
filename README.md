@@ -41,9 +41,3 @@ On mobile? Well… let’s just say it keeps things interesting!
 git clone https://github.com/your-username/insurance-website.git
 cd insurance-website
 # Open index.html in your browser
-
-*Form integration for actual quote submission
-
-*More accessibility and UI polish
-
-
